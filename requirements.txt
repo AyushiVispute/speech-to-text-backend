@@ -1,0 +1,7 @@
+Flask
+Flask-Cors
+pydub
+SpeechRecognition
+requests
+python-dotenv
+gunicorn
