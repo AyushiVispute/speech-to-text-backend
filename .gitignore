@@ -2,6 +2,10 @@
 venv/
 .env
 
+# Ignore Python virtual environments
+venv/
+.env
+
 # Byte-compiled / cache files
 __pycache__/
 *.py[cod]
@@ -12,7 +16,7 @@ Thumbs.db
 .vscode/
 .idea/
 
-# Ignore environment and build files
+# Ignore logs and temporary files
 *.log
 *.sqlite3
 instance/
