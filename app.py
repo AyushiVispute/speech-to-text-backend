@@ -9,8 +9,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # --- FFmpeg setup ---
-# ⚠️ Make sure ffmpeg.exe and ffprobe.exe are copied into your backend folder
-# (E:\Project1\1)FLASK PROJECT\4) speech to text\backend)
+
 ffmpeg_path = os.path.join(os.getcwd(), "ffmpeg.exe")
 ffprobe_path = os.path.join(os.getcwd(), "ffprobe.exe")
 
