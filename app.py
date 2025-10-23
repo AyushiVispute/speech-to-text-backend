@@ -8,13 +8,15 @@ from dotenv import load_dotenv
 # Load environment variables
 load_dotenv()
 
-# --- FFmpeg setup ---
+# -- FFmpeg setup --
 
 ffmpeg_path = os.path.join(os.getcwd(), "ffmpeg.exe")
 ffprobe_path = os.path.join(os.getcwd(), "ffprobe.exe")
 
 AudioSegment.converter = ffmpeg_path
 AudioSegment.ffprobe = ffprobe_path
+
+
 
 print("🎬 FFmpeg converter path:", AudioSegment.converter)
 print("🧩 FFprobe path:", AudioSegment.ffprobe)
@@ -45,6 +47,8 @@ def transcribe_audio():
     file.save(file_path)
     print("📥 Saved incoming file:", file_path)
     print(f"📂 File exists after save? {os.path.exists(file_path)}")
+    
+    
 
     try:
         # --- Convert to WAV ---
@@ -56,7 +60,7 @@ def transcribe_audio():
         sound.export(wav_path, format="wav")
         print("✅ Exported WAV to:", wav_path)
 
-        # --- Speech Recognition ---
+        # - Speech Recognition -
         recognizer = sr.Recognizer()
         with sr.AudioFile(wav_path) as source:
             print("🎙️ Reading audio...")
@@ -93,3 +97,4 @@ def transcribe_audio():
 if __name__ == "__main__":
     port = int(os.getenv("PORT", 5000))
     app.run(host="0.0.0.0", port=port, debug=True)
+    
