@@ -25,7 +25,7 @@ print("FFprobe exists?", os.path.exists(AudioSegment.ffprobe))
 
 # --- Flask setup ---
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
+CORS(app, resources={r"/*": {"origins": "*"}}, origins=["https://speech-to-text-frontend-psi.vercel.app"]supports_credentials=True)
 
 UPLOAD_FOLDER = "temp_audio"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
