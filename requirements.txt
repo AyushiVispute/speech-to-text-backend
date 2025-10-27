@@ -1,7 +1,6 @@
 Flask
-Flask-Cors
+flask-cors
+gunicorn
 pydub
 SpeechRecognition
-requests
 python-dotenv
-gunicorn
